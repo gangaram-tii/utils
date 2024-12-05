@@ -13,7 +13,7 @@ pkgs.mkShell {
       source .venv/bin/activate
     else
       source .venv/bin/activate
-      pip install sh
+      pip install requests beautifulsoup4
     fi
     echo "Welcome to your Python development environment."
   '';
