@@ -39,6 +39,7 @@ Config comparision report of ghaf-host kernel and Linux-6.12 hardening config is
 
 [Comparision Report](./config-utilities/report/configs.md)
 
-Base config: [Linux-6.12 hardening config](https://github.com/torvalds/linux/blob/v6.12/kernel/configs/hardening.config)
-Target config: ghaf-host-24.09-04-01bb7e379cc581525fc2952744595a26bb7d21c8  Linux-6.6.62
-               (Config captured from /proc/config.gz of ghaf-host)
+**Base config:** [Linux-6.12 hardening config](https://github.com/torvalds/linux/blob/v6.12/kernel/configs/hardening.config)
+
+**Target config:** ghaf-host-24.09-04-01bb7e379cc581525fc2952744595a26bb7d21c8 - Linux-6.6.62
+                (Config captured from /proc/config.gz of ghaf-host)
