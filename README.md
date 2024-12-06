@@ -34,7 +34,8 @@ $> python ./tools/compare_and_generate_md.py ./kernel-configs/kernel-6.12-harden
 ```
 
 
-#Reports:
+# Reports:
+
 Config comparision report of ghaf-host kernel and Linux-6.12 hardening config is available here:
 
 [Comparision Report](./config-utilities/report/configs.md)
