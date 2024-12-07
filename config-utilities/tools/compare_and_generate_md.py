@@ -3,18 +3,20 @@ import os
 from config_utils import config_file_as_dict, linux_config_description
 
 def generate_md_table(base, target):
-    markdown_table = f"| Config Name | Description | {os.path.basename(base)}  | {os.path.basename(target)} |\n|---|---|---|---|\n"
+    markdown_header=f"# Kernel Config Comparision\n\n## Table:\n\n"
+    markdown_table = f"| Index | Config Name | Description | {os.path.basename(base)}  | {os.path.basename(target)} |\n|---|---|---|---|---|\n"
     baseconf = config_file_as_dict(base)
     targetconf = config_file_as_dict(target)
-
+    index = 0
     for conf, setting in baseconf.items():
         desc = linux_config_description(conf, True)
         if conf in targetconf:
             targetsetting = targetconf[conf]
         else:
             targetsetting = "NOT AVAILABLE!"
-        markdown_table = markdown_table + f"| {conf} | {desc} | {setting}  | {targetsetting} |\n"
-    return markdown_table
+        index = index + 1
+        markdown_table = markdown_table + f"| {index} | {conf} | {desc} | {setting}  | {targetsetting} |\n"
+    return markdown_header + markdown_table
 
 def main():
     # Set up command-line argument parsing

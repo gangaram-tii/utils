@@ -11,6 +11,7 @@ pkgs.mkShell {
     if [ ! -d .venv ]; then
       virtualenv .venv
       source .venv/bin/activate
+      pip install requests beautifulsoup4
     else
       source .venv/bin/activate
       pip install requests beautifulsoup4
